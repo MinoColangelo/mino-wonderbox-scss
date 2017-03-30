@@ -1,0 +1,12 @@
+{
+  "name": "mino-wonderbox-scss",
+  "version": "1.0.0",
+  "author": "MinoColangelo <carminec87@gmail.com>",
+  "license": "MIT",
+  "main": "./scss/_tool.scss",
+  "ignore": [],
+  "dependencies": {
+    "normalize-libsass": ">=1.0.3",
+    "animate-sass": ">=0.6.2"
+  }
+}

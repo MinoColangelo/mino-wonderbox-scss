@@ -1,0 +1,6 @@
+// # Mixins
+
+// ## Transition animation
+@mixin trans($what:all, $time:200ms) {
+  transition: $what $time;
+}

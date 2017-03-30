@@ -1,0 +1,35 @@
+﻿/*------------------------
+function that calculates if text needs to be light or dark
+depending on the background color passed.
+
+From this W3C document: https://www.w3.org/TR/AERT
+			
+Color brightness is determined by the following formula: 
+((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+------------------------*/
+
+@function contrast($n, $p:70%) {
+  
+  $contrasted-color: $n;
+  
+  /*
+    @if (lightness($n) > 60) {
+        $contrasted-color: lighten($n, $p);
+      }
+      @else {
+        $contrasted-color: darken($n, $p);
+      }
+  */
+
+  $n-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+  $n-lightness: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+  
+  @if abs($n-brightness) < ($n-lightness/2){
+    $contrasted-color: lighten($n, $p);
+  }
+  @else {
+    $contrasted-color: darken($n, $p);
+  }
+
+  @return $contrasted-color;
+}

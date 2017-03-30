@@ -1,0 +1,16 @@
+// # Mixins
+
+// ## Breakpoints fino a
+@mixin fino_a-schermo($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)} -1px) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}

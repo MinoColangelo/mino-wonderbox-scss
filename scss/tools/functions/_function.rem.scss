@@ -1,0 +1,14 @@
+// # Functions
+
+// ## funzione che trasforma la grandezza di px in rem (da formalizzare con il grunt-task "postcss").
+@function rem($pixels, $context: $basic-font-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}

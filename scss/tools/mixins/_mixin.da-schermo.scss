@@ -1,0 +1,16 @@
+// # Mixins
+
+// ## Breakpoints a partire da
+@mixin da-schermo($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
