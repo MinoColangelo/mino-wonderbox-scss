@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "MinoColangelo <carminec87@gmail.com>",
   "license": "MIT",
-  "main": "./scss/_tool.scss",
+  "main": "./_tool.scss",
   "ignore": [],
   "dependencies": {
     "normalize-libsass": ">=1.0.3",

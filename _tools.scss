@@ -4,33 +4,33 @@
 // # GET
 // first of all create GET function, to simplify "map_get" of nested $maps
 // !!! Needed in other mixins/functions
-@import "functions/_function.get";
+@import "src/tools/functions/_function.get";
 
 // # CLEARFIX
 // Classic mixin used to create a frame for floated elements
-@import "mixins/_mixin.clearfix";
+@import "src/tools/mixins/_mixin.clearfix";
 
 // # REM
 // Calculate rem value and create a fallback value in pixel
-@import "functions/_function.rem";
+@import "src/tools/functions/_function.rem";
 
 // # CONTRAST
-@import "functions/_function.contrast";
-@import "mixins/_mixin.contrast";
+@import "src/tools/functions/_function.contrast";
+@import "src/tools/mixins/_mixin.contrast";
 
 // # MEDIA QUERIES
 // dependencies: ["settings/_breakpoints", "functions/_function.get"]
-@import "mixins/_mixin.da-schermo";
-@import "mixins/_mixin.fino_a-schermo";
+@import "src/tools/mixins/_mixin.da-schermo";
+@import "src/tools/mixins/_mixin.fino_a-schermo";
 
 // # MATERIAL SHADOW
 // this feature is used to create simple material shadow,
 // following Google suggestions.
 // dependencies: ["functions/_function.bottom-shadow", "functions/_function.top-shadow"]
-@import "mixins/_mixin.mshadow";
-@import "functions/_function.bottom-shadow";
-@import "functions/_function.top-shadow";
+@import "src/tools/mixins/_mixin.mshadow";
+@import "src/tools/functions/_function.bottom-shadow";
+@import "src/tools/functions/_function.top-shadow";
 
 // # TRANS
 // Simple transition mixin
-@import "mixins/_mixin.trans";
+@import "src/tools/mixins/_mixin.trans";
